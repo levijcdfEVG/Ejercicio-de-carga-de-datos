@@ -3,7 +3,19 @@
 //Funciones
 function buscarEmpleado(empleados){
     let busqueda = prompt("Introduce el numero de DNI: ");
-    empleados  
+    console.log(busqueda)
+    for (let index = 0; index < empleados.length; index++) {
+        console.log(empleados[index])
+        if(empleados[index][0] == busqueda){
+            alert("¡Encontrado!");
+            alert(empleados[index]);
+        }else{
+            console.log("prueba")
+        }
+        
+    } 
+
+    return "No se ha encontrado";
 }
 
 
@@ -38,14 +50,12 @@ for (let index = 0; index < datosSeparados.length; index++) {
         {id: datosLinea[0]},
         {nombre: datosLinea[1]},
         {edad: datosLinea[2]},
-        {Sexo: datosLinea[3]},
-        {Puesto: datosLinea[4]},
+        {sexo: datosLinea[3]},
+        {puesto: datosLinea[4]},
     ];
-    
     empleados.push(empleadosAux);
 }
 
-console.log(empleados);
 
 
 buscarEmpleado(empleados);
