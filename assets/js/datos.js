@@ -7,7 +7,7 @@ function buscarEmpleado(empleados) {
     for (let index = 0; index < empleados.length; index++) {
         if (empleados[index].id == busqueda) {
             alert("¡Encontrado!");
-            alert(JSON.stringify(empleados[index]));
+            console.log(empleados[index])
             return; // Exit the function after finding the employee
         }
     }
@@ -31,6 +31,7 @@ function aniadirEmpleado(empleados){
         {puesto: puesto},
     ];
     empleados.push(empleadosAux);
+    console.log(empleados);
 }
 
 function borrarEmpleado(empleados) {

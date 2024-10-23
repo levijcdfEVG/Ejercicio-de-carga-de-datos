@@ -30,7 +30,9 @@ function aniadirEmpleado(empleados){
         puesto: puesto
     };
     
+    
     empleados.push(empleado);
+    console.log(empleados);
 }
 
 function borrarEmpleado(empleados) {
