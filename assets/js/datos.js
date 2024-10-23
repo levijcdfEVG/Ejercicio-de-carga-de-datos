@@ -1,21 +1,17 @@
 'use strict'
 
 //Funciones
-function buscarEmpleado(empleados){
+function buscarEmpleado(empleados) {
     let busqueda = prompt("Introduce el numero de DNI: ");
-    console.log(busqueda)
-    for (let index = 0; index < empleados.length; index++) {
-        console.log(empleados[index])
-        if(empleados[index][0] == busqueda){
-            alert("¡Encontrado!");
-            alert(empleados[index]);
-        }else{
-            console.log("prueba")
-        }
-        
-    } 
-
-    return "No se ha encontrado";
+    console.log(busqueda);
+    let empleadoEncontrado = empleados.find(empleado => empleado.id == busqueda);
+    
+    if (empleadoEncontrado) {
+        alert("¡Encontrado!");
+        alert(`ID: ${empleadoEncontrado.id}\nNombre: ${empleadoEncontrado.nombre}\nEdad: ${empleadoEncontrado.edad}\nSexo: ${empleadoEncontrado.sexo}\nPuesto: ${empleadoEncontrado.puesto}`);
+    } else {
+        alert("No se ha encontrado");
+    }
 }
 
 
