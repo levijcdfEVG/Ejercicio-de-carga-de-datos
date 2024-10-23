@@ -7,7 +7,7 @@ function buscarEmpleado(empleados) {
     for (let index = 0; index < empleados.length; index++) {
         if (empleados[index].id == busqueda) {
             alert("¡Encontrado!");
-            alert(`ID: ${empleados[index].id}\nNombre: ${empleados[index].nombre}\nEdad: ${empleados[index].edad}\nSexo: ${empleados[index].sexo}\nPuesto: ${empleados[index].puesto}`);
+            alert(empleados[index]);
             return; // Exit the function after finding the employee
         }
     }
@@ -15,7 +15,36 @@ function buscarEmpleado(empleados) {
     alert("No se ha encontrado");
 }
 
+function aniadirEmpleado(empleados){
+    
+    let id = prompt("Introduce el dni: ");
+    let nombre = prompt("Introduce el nombre: ");
+    let edad = prompt("Introduce la edad: ");
+    let genero = prompt("Introduce el genero: ");
+    let puesto = prompt("Introduce el puesto: ");
+    
+    let empleadosAux = [
+        {id: id},
+        {nombre: nombre},
+        {edad: edad},
+        {sexo: genero},
+        {puesto: puesto},
+    ];
+    empleados.push(empleadosAux);
+}
 
+function borrarEmpleado(empleados) {
+    let dniABorrar = prompt("Introduce el dni del registro que quieras borrar: ");
+    
+    let index = empleados.findIndex(empleado => empleado.id == dniABorrar);
+    
+    if (index !== -1) {
+        empleados.splice(index, 1);
+        alert("¡Empleado borrado exitosamente!");
+    } else {
+        alert("No se ha encontrado un empleado con ese DNI.");
+    }
+}
 
 //Flujo
 let datosAlumnos = `12345,Javier Arias Carroza,45,Masculino,Gerente
@@ -56,5 +85,7 @@ for (let index = 0; index < datosSeparados.length; index++) {
 
 
 buscarEmpleado(empleados);
+aniadirEmpleado(empleados);
+borrarEmpleado(empleados);
 
-
+console.log(empleados)
