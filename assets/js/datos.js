@@ -72,13 +72,13 @@ let datosSeparados = datosAlumnos.split("\n");
 let empleados = new Array();
 for (let index = 0; index < datosSeparados.length; index++) {
     let datosLinea = datosSeparados[index].split(",");
-    let empleadosAux = [
-        {id: datosLinea[0]},
-        {nombre: datosLinea[1]},
-        {edad: datosLinea[2]},
-        {sexo: datosLinea[3]},
-        {puesto: datosLinea[4]},
-    ];
+    let empleadosAux = {
+        id: datosLinea[0],
+        nombre: datosLinea[1],
+        edad: datosLinea[2],
+        sexo: datosLinea[3],
+        puesto: datosLinea[4],
+    };
     empleados.push(empleadosAux);
 }
 
