@@ -7,7 +7,7 @@ function buscarEmpleado(empleados) {
     for (let index = 0; index < empleados.length; index++) {
         if (empleados[index].id == busqueda) {
             alert("¡Encontrado!");
-            alert(empleados[index]);
+            alert(JSON.stringify(empleados[index]));
             return; // Exit the function after finding the employee
         }
     }

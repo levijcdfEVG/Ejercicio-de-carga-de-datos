@@ -7,7 +7,7 @@ function buscarEmpleado(empleados) {
     for (let index = 0; index < empleados.length; index++) {
         if (empleados[index].id == busqueda) {
             alert("¡Encontrado!");
-            alert(empleados[index]);
+            console.log(empleados[index])
             return; // Exit the function after finding the employee
         }
     }
@@ -91,7 +91,8 @@ function cargarDatos(data) {
             empleados.push(empleado);
         }
     }
-    
+
+    console.log(empleados);
     return empleados;
 }
 
