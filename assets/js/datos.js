@@ -1,5 +1,10 @@
 'use strict'
 
+//Funciones
+function buscarEmpleado(empleados){
+    let busqueda = prompt("Introduce el numero de DNI: ");
+    empleados  
+}
 
 
 
@@ -24,3 +29,25 @@ let datosAlumnos = `12345,Javier Arias Carroza,45,Masculino,Gerente
 78111,Hugo Sanchez Gallardo,28,Masculino,Diseñador
 66112,Joaquin Francisco Telo Nuñez,52,Masculino,Director Financiero
 11234,Maria Vidigal Barroso,30,Femenino,Contadora`;
+
+let datosSeparados = datosAlumnos.split("\n");
+let empleados = new Array();
+for (let index = 0; index < datosSeparados.length; index++) {
+    let datosLinea = datosSeparados[index].split(",");
+    let empleadosAux = [
+        {id: datosLinea[0]},
+        {nombre: datosLinea[1]},
+        {edad: datosLinea[2]},
+        {Sexo: datosLinea[3]},
+        {Puesto: datosLinea[4]},
+    ];
+    
+    empleados.push(empleadosAux);
+}
+
+console.log(empleados);
+
+
+buscarEmpleado(empleados);
+
+
