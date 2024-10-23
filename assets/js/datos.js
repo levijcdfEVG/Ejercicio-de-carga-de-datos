@@ -88,4 +88,4 @@ buscarEmpleado(empleados);
 aniadirEmpleado(empleados);
 borrarEmpleado(empleados);
 
-console.log(empleados)
+console.log(empleados);
