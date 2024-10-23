@@ -48,7 +48,7 @@ function borrarEmpleado(empleados) {
 
 // Función para cargar los datos desde el archivo de texto
 function cargarDatosConFetch(){
-    fetch('/home/levijcdf/Documents/GitHub/Ejercicio-de-carga-de-datos/empleados2DAW.txt') // Ruta del fichero
+    fetch('../empleados2DAW.txt') // Ruta del fichero
     .then(response => {
         if (!response.ok) {
             throw new Error("Error al cargar el fichero");
